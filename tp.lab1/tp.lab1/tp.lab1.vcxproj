@@ -78,9 +78,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="tp.lab1.h" />
+    <ClInclude Include="argsParse.h" />
+    <ClInclude Include="filew.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="argsParse.cpp" />
     <ClCompile Include="filew.cpp" />
     <ClCompile Include="tp.lab1.cpp" />
   </ItemGroup>

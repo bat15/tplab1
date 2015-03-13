@@ -16,5 +16,5 @@ protected:
 public:
 	filew(){}
 	~filew(){}
-	void getproc(char *,char *,char*,filew *,int);
+	void funcswitch(char *,char *,char*,filew *,int);
 };

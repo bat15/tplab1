@@ -16,7 +16,7 @@ int main(int argc,char *argv[])
 		cout << "too much arguments" << endl;
 		return -1;
 	}
-	file->getproc(argv[1], argv[2], argv[3], file, argc);
+	file->funcswitch(argv[1], argv[2], argv[3], file, argc);
 	delete file;
 	
 	return 0;

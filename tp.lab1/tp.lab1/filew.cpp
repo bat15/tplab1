@@ -81,7 +81,7 @@ bool filew::fsearch(string filePath){
 		return isExist;
 }
 
-void filew::getproc(char *fproc,char *str1,char *str2,filew *file,int argentum)
+void filew::funcswitch(char *fproc, char *str1, char *str2, filew *file, int argentum)
 {
 	fname1 = str1;
 	fname2 = str2;

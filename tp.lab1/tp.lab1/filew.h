@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "io.h"
+
 using namespace std;
 class filew
 {
@@ -11,6 +12,10 @@ protected:
 	void fdelete();
 	void fcopy();
 	void frename();
+	void dcreate();
+	void ddelete();
+	void dcopy();
+	void drename();
 	bool fsearch(std::string);
 
 public:

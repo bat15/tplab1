@@ -1,4 +1,4 @@
-﻿Сборка начата 13.03.2015 15:34:47.
+﻿Сборка начата 14.03.2015 12:43:23.
      1>Проект "C:\Users\iks\Documents\GitHub\tplab1\tp.lab1\tp.lab1\tp.lab1.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt argsParse.cpp filew.cpp tp.lab1.cpp
@@ -16,4 +16,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:07.48
+Затраченное время: 00:00:01.84

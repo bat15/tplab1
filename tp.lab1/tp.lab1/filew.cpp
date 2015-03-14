@@ -56,7 +56,8 @@ void filew::fcopy()
 		temp2[i] = '\0';
 		if (_access(fname2, 0) && !_access(fname1, 0) && !_access(temp2, 0))
 		{
-			system(temp);
+			if (system(temp) != 0)
+				cout << "unsuccessful system calling" << endl;
 		}
 		else
 			cout << "cant copy file or first file not found" << endl; 
@@ -81,13 +82,65 @@ bool filew::fsearch(string filePath){
 		return isExist;
 }
 
+void filew::dcreate()
+{
+	char *temp = new char[strlen(fname1) + 10];
+	strcpy(temp, "MKDIR \"");
+	strcat(temp, fname1);
+	strcat(temp, "\"");
+	if (_access(fname1, 0))
+	{
+		if (system(temp) != 0)
+			cout << "unsuccessful system calling" << endl;
+	}
+	else
+		cout << "directory already exists" << endl;
+	delete temp;
+}
+void filew::ddelete()
+{
+	char *temp = new char[strlen(fname1) + 10];
+	strcpy(temp, "RMDIR \"");
+	strcat(temp, fname1);
+	strcat(temp, "\"");
+	if (!_access(fname1, 0))
+	{
+		if (system(temp) != 0)
+			cout << "unsuccessful system calling" << endl;
+	}
+	else
+		cout << "directory not found" << endl;
+	delete temp;
+}
+void filew::dcopy()
+{
+	
+	char *temp = new char[strlen(fname1) + strlen(fname2) + 19];
+	strcpy(temp, "MKDIR \"");
+	strcat(temp, fname2);
+	strcat(temp, "\"");
+		if (system(temp) != 0)
+			cout << "unsuccessful system calling" << endl;
+	strcpy(temp, "COPY \"");
+	strcat(temp, fname1);
+	strcat(temp, "\" \"");
+	strcat(temp, fname2);
+	strcat(temp, "\"");
+	if (system(temp) != 0)
+		cout << "unsuccessful system calling" << endl;
+	delete temp;
+}
+void filew::drename()
+{
+	frename();
+}
+
 void filew::funcswitch(char *fproc, char *str1, char *str2, filew *file, int argentum)
 {
 	fname1 = str1;
 	fname2 = str2;
 	char proc[6]; proc[0] = 'e';
 	*proc = *fproc;
-
 	argsParsing *argsMASS = new argsParsing;
 
 	argsMASS->getCMNDArg(fproc);
@@ -107,8 +160,6 @@ void filew::funcswitch(char *fproc, char *str1, char *str2, filew *file, int arg
 	default: {cout << "illegal command not found" << endl; break; }
 	}
 	delete argsMASS;
-	
 }
-
 
 
